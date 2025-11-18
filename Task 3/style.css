@@ -1,0 +1,36 @@
+*{
+margin:0%;
+padding:0%;
+box-sizing: border-box;
+}
+html,body{
+height: 100%;
+width: 100%;
+font-family: helvetica neue;
+background-color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+backdrop-filter: blur(12px);
+}
+#box{
+    height: 250px;
+    width: 300px;
+    background-color: rgb(223, 251, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px; 
+    border-radius: 10px;  
+    background-position: center;
+    background-size: cover;
+}
+button{
+    font-size: 25px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    background-color: rgb(199, 255, 255);
+}

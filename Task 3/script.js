@@ -1,47 +1,58 @@
 var btn = document.querySelector('button')
 var box = document.querySelector('#box')
 var body = document.querySelector('body')
+var hname = document.querySelector('#name')
+var h2name = document.querySelector('#superpower')
+var h3name = document.querySelector('#mainWeapon')
 
 var Marvel =[
     {
         name:"Iron Man",
         superpower:"Power Armor suit",
         mainWeapon:"Iron Man armor",
-         
+        primary:"#871A44",
+        secondary:"#BFA469"
     },
       {
     name: "Captain America",
     superpower: "Super-soldier strength",
-    mainWeapon: "Vibranium shield"
+    mainWeapon: "Vibranium shield",
+    primary:"#B82735",
+    secondary:"#254A9A"
   },
   {
     name: "Thor",
-    superpower: "God of Thunder, control over lightning",
-    mainWeapon: "Stormbreaker / originally Mjolnir"
+    superpower: "God of Thunder",
+    mainWeapon: "Stormbreaker",
+    primary:"#256081",
+    secondary:"gold"
   },
   {
     name: "Black Panther",
     superpower: "Vibranium suit",
-    mainWeapon: "Claws in Vibranium suit"
+    mainWeapon: "Vibranium suit",
+    primary:"#8702fcff",
+    secondary:"#000"
   },
   {
     name: "Spider-Man",
     superpower: "Spider sense,agility",
-    mainWeapon: "Web-shooters"
+    mainWeapon: "Web-shooters",
+    primary:"#295984",
+    secondary:"#E2252C"
   }
 ];
 
-
 btn.addEventListener('click',function(){
-    var ran = Math.floor(Math.random()*256)
-    var ran2 = Math.floor(Math.random()*256)
-    var ran3 = Math.floor(Math.random()*256)
-    console.log(ran,ran2,ran3)
 
-    var bran = Math.floor(Math.random()*256)
-    var bran2 = Math.floor(Math.random()*256)
-    var bran3 = Math.floor(Math.random()*256)
-    console.log(bran,bran2,bran3)
-    box.style.backgroundColor =`rgb(${ran},${ran2},${ran3})`
-    body.style.backgroundColor =`rgb(${bran},${bran2},${bran3})`
+  var change = Marvel[Math.floor(Math.random()*Marvel.length)]
+  
+  box.style.backgroundColor = change.primary
+  body.style.backgroundColor = change.secondary
+
+  hname.innerHTML = change.name
+  h2name.innerHTML = change.superpower
+  h3name.innerHTML = change.mainWeapon
+  console.log(change)
+    
 })

@@ -59,8 +59,8 @@ btn.addEventListener('click',function(){
     h1.innerHTML = sar[a]
     h1.style.color = 'white'
     h1.style.position = 'absolute'
-    h1.style.top = top+'%' 
-    h1.style.left = left+'%'
+    h1.style.top = top+'vh' 
+    h1.style.left = left+'vw'
     h1.style.rotate = deg+'deg'
     h1.style.scale = scale
 

@@ -1,0 +1,22 @@
+*{
+margin:0%;
+padding:0%;
+box-sizing: border-box;
+}
+html,body{
+height: 100%;
+width: 100%;
+font-family: helvetica neue;
+text-align: center;
+}
+h1{
+    margin: 80px;
+    font-size: 100px;
+}
+button{
+    padding: 20px 30px;
+    font-size: 20px;
+    margin: 30px;
+    border-radius: 10px;
+    background-color: lightsalmon;
+}

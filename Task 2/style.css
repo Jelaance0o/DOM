@@ -1,0 +1,29 @@
+*{
+margin:0%;
+padding:0%;
+box-sizing: border-box;
+}
+html,body{
+height: 100%;
+width: 100%;
+font-family: helvetica neue;
+background-color: black;
+display: flex;
+align-items: center;
+flex-direction: column;
+gap: 40px;
+
+}
+#box{
+    height: 500px;
+    width: 500px;
+    background-color: rgb(255, 174, 174);
+    margin: 30px;
+    border: 10px solid white;
+    border-radius: 10px;
+}
+button{
+    padding: 20px 30px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}

@@ -1,0 +1,54 @@
+*{
+margin:0%;
+padding:0%;
+box-sizing: border-box;
+}
+html,body{
+height: 100%;
+width: 100%;
+font-family: helvetica neue;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    background-color: black;
+    justify-content: center;
+
+}
+
+#card{
+    height: 450px;
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    position: relative;
+    
+    img{
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    i{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 60px;
+        color: rgba(255, 235, 205, 0);
+        transform: translate(-50%,-50%) scale(0) rotate(60%);
+        transition: all cubic-bezier(.48,.27,.96,.87) 0.4s;
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20220705/pngtree-instagram-color-gradient-background-image_1416596.png);
+        -webkit-background-clip:text;
+        background-position: center;
+        background-size: cover;
+        opacity: 0;
+    }
+}

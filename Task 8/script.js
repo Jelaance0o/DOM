@@ -6,8 +6,8 @@
 //     div.innerHTML = det.key
 // })
 
-var keys = document.querySelectorAll('#white')
-var  active = element.classList.remove("active");
+var keys = document.querySelectorAll('.white')
+console.log(keys)
 
 var one = new Audio('./31.mp3')
 var two = new Audio('./32.mp3')
@@ -26,73 +26,97 @@ var fourteen = new Audio('./44.mp3')
 var fifteen = new Audio('./45.mp3')
 var sixteen = new Audio('./46.mp3')
 
-console.log(keys)
+function time (keyElement){
+    keyElement.style.backgroundColor = " rgba(143, 143, 143, 1)";
+    keyElement.style.transform = "scale(0.9)"; 
+    
+    setTimeout(() => {
+    keyElement.style.backgroundColor = "white";
+    keyElement.style.transform = "scale(1)"; 
+}, 200);}
+
 document.addEventListener('keydown',function(det){
     console.log(det.key)
 
 if(det.key === "a"){
     one.play();
     one.currentTime = 0;
+    time(keys[0])
 }
 if(det.key === "s"){
     two.play();
     two.currentTime = 0;
+    time(keys[1])
 }
 if(det.key === "d"){
     three.play();
     three.currentTime = 0;
+    time(keys[2])
 }
 if(det.key === "f"){
     four.play();
     four.currentTime = 0;
+    time(keys[3])
 }
 if(det.key === "g"){
     five.play();
     five.currentTime = 0;
+    time(keys[4])
 }
 if(det.key === "h"){
     six.play();
     six.currentTime = 0;
+    time(keys[5])
 }
 if(det.key === "j"){
     seven.play();
     seven.currentTime = 0;
+    time(keys[6])
 }
 if(det.key === "k"){
     eight.play();
     eight.currentTime = 0;
+    time(keys[7])
 }
 if(det.key === "l"){
     nine.play();
     nine.currentTime = 0;
+    time(keys[8])
 }
 if(det.key === "z"){
     ten.play();
     ten.currentTime = 0;
+    time(keys[9])
 }
 if(det.key === "x"){
     eleven.play();
     eleven.currentTime = 0;
+    time(keys[10])
 }
 if(det.key === "c"){
     twelve.play();
     twelve.currentTime = 0;
+    time(keys[11])
 }
 if(det.key === "v"){
     thirteen.play();
     thirteen.currentTime = 0;
+    time(keys[12])
 }
 if(det.key === "b"){
     fourteen.play();
     fourteen.currentTime = 0;
+    time(keys[13])
 }
 if(det.key === "n"){
     fifteen.play();
     fifteen.currentTime = 0;
+    time(keys[14])
 }
 if(det.key === "m"){
     sixteen.play();
     sixteen.currentTime = 0;
+    time(keys[15])
 }
 
 })

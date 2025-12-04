@@ -23,14 +23,14 @@ main {
 #ctn {
   height: 400px;
   width: 90%;
-  background-color: rgba(47, 47, 48, 0.473);
+  background-color: rgba(255, 255, 255, 0.232);
   text-align: center;
   padding: 50px;
   border-radius: 20px;
   display: inline-flex;
 }
 #ctn .white {
-  background-color: rgb(99, 99, 99);
+  background-color: white;
   width: 100px;
   margin: 1px;
   display: flex;

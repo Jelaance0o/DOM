@@ -7,4 +7,31 @@ html,body{
 height: 100%;
 width: 100%;
 font-family: helvetica neue;
+background-color: rgb(16, 16, 16);
+}
+div{
+    color: aliceblue;
+    width: 500px;
+    height:  100px;
+    background-color: rgb(44, 44, 43);
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    
+    button{
+        border-radius: 10px;
+        padding: 20px 30px;
+        display: flex;
+        font-size: 16px;
+        justify-content: center;
+        align-items: center;
+        background-color: #9eadff;
+        font-weight: 600;
+    }
+    button:active{
+        scale: 0.9
+    }
 }

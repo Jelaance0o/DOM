@@ -1,0 +1,117 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: helvetica neue;
+  background-color: rgb(44, 44, 44);
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+}
+
+section {
+  height: 100%;
+  width: 400px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  margin: auto;
+  border-radius: 10px;
+}
+section .allreels {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+section .allreels::-webkit-scrollbar {
+  display: none;
+}
+section .allreels .reel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+section .allreels .reel video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section .allreels .reel .bottom {
+  padding: 30px 20px;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.812));
+  position: absolute;
+  bottom: 0;
+}
+section .allreels .reel .bottom .user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+section .allreels .reel .bottom .user h4 {
+  font-size: 23px;
+  font-weight: 400;
+}
+section .allreels .reel .bottom .user button {
+  padding: 3px 7px;
+}
+section .allreels .reel .bottom .user img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section .allreels .reel .bottom .user button {
+  background-color: rgba(0, 255, 255, 0);
+  border-radius: 5px;
+  border: 1px solid white;
+}
+section .allreels .reel .bottom h3 {
+  font-weight: 500;
+  font-size: 18px;
+}
+section .allreels .reel .right {
+  width: 40px;
+  padding: 30px;
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 19px;
+}
+section .allreels .reel .right div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section .allreels .reel .right h4 {
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+}
+section .allreels .reel .right h6 {
+  font-size: 15px;
+  font-weight: 300;
+}

@@ -29,7 +29,7 @@ function time(keyElement) {
   keyElement.style.transform = "scale(0.9)";
 
   setTimeout(() => {
-    keyElement.style.backgroundColor = " rgba(184, 184, 184, 1)";
+
     keyElement.style.transform = "scale(1)";
 }, 100);
 set

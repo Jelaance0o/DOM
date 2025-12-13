@@ -1,4 +1,4 @@
-const posts = [
+const reels = [
   {
     username: "Tech.Here",
     likeCount: 1200,
@@ -123,8 +123,12 @@ const posts = [
 
 
 var reel = document.querySelector("#reel");
-var sum = "";
-posts.forEach(function (elem) {
+var allreels = document.querySelector(".allreels");                                            
+function addData(){
+
+  var sum = "";
+  
+reels.forEach(function (elem, idx) {
   sum =
     sum +
     `<div class="reel">
@@ -136,17 +140,17 @@ posts.forEach(function (elem) {
 
                             <img src="${elem.userProfile}" alt="">
                             <h4>${elem.username}</h4>
-                            <button>${
+                            <button id=${idx} class ="follow">${
                               elem.isFollowed ? "Unfollow" : "Follow"
                             }</button>
                         </div>
                         <h3>${elem.caption}</h3>
                     </div>
                     <div class="right">
-                        <div class="like">
+                        <div id=${idx} class="like">
                                <h4 class="like-icon icon">${
                                  elem.isLiked
-                                   ? '<i class="love ri-heart-3-fill"></i>'
+                                   ? '<i id="love" class="love ri-heart-3-fill"></i>'
                                    : '<i class="ri-heart-3-line"></i>'
                                }</h4>
                             <h6>${elem.likeCount}</h6>
@@ -165,5 +169,31 @@ posts.forEach(function (elem) {
                     </div>
                 </div>`;
 });
-var allreels = document.querySelector(".allreels");
 allreels.innerHTML = sum;
+}
+
+addData()
+
+
+allreels.addEventListener('click',function(dets){
+  if(dets.target.className =='like'){
+    
+    if (!reels[dets.target.id].isLiked) {
+    reels[dets.target.id].likeCount++;
+    reels[dets.target.id].isLiked = true;
+  }
+  else{
+    reels[dets.target.id].likeCount--;
+    reels[dets.target.id].isLiked = false; 
+  }}
+
+  if(dets.target.className=='follow'){
+    if(!reels[dets.target.id].isFollowed){
+      reels[dets.target.id].isFollowed = true
+    }
+    else{
+      reels[dets.target.id].isFollowed = false
+    }
+  }
+  addData()
+})

@@ -124,8 +124,8 @@ section {
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  top: 3%;
-  right: 2%;
+  top: 2rem;
+  right: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;

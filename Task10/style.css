@@ -132,6 +132,7 @@ section {
   font-size: 20px;
   position: absolute;
   color: wheat;
+  z-index: 10;
 }
 .mute i {
   font-size: 22px;

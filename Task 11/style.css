@@ -1,0 +1,36 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(34, 33, 33);
+  font-family: helvetica neue;
+  cursor: none;
+}
+
+:root{
+  --x: 400px;
+  --y: 400px;
+}
+main{
+  height: 100%;
+  width: 100%;
+  position:fixed;
+}
+#outer {
+  width: 100%;
+  height: 100%;
+  transform: all ease 1s;
+  z-index: 10;
+  background: radial-gradient(200px at var(--x) var(--y), rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.858));
+  position: absolute;
+}
+video{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
